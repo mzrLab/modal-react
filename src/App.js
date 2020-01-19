@@ -17,10 +17,14 @@ render(){
   return(
     <main>
         <h1>React Modal</h1>
+        <Modal show={this.state.show} handleClose={this.hideModal}>
+          <p>Modal</p>
+          <p>Data</p>
+        </Modal>
         <button type="button" onClick={this.showModal}>
           open
         </button>
-    </main>
+      </main>
   )
 }
 }
