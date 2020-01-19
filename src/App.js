@@ -1,12 +1,28 @@
 import React from 'react';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { show: false };
+  }
 
-    </div>
-  );
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+render(){
+  return(
+    <main>
+        <h1>React Modal</h1>
+        <button type="button" onClick={this.showModal}>
+          open
+        </button>
+    </main>
+  )
+}
 }
 
 export default App;
