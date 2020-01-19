@@ -1,15 +1,15 @@
 import React from 'react';
+import Modal from './Modal';
+import './App.css';
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = { show: false };
   }
-
   showModal = () => {
     this.setState({ show: true });
   };
-
   hideModal = () => {
     this.setState({ show: false });
   };
